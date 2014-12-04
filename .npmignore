@@ -1,0 +1,5 @@
+*.coffee
+node_modules
+test*
+.idea
+npm-*

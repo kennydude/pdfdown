@@ -3,7 +3,7 @@ args = process.argv.slice(2)
 fs = require("fs")
 commonmark = require("commonmark")
 
-Stylesheet = require "./stylesheets/stylesheet.coffee"
+Stylesheet = require "./stylesheets/stylesheet"
 styles = new Stylesheet()
 
 styles.addSheet fs.readFileSync(__dirname + "/stylesheets/default.css").toString(), (err) ->
@@ -18,12 +18,14 @@ styles.addSheet fs.readFileSync(__dirname + "/stylesheets/default.css").toString
 				args.splice(k, 2)
 				return doIt()
 			return
-		return doIt()
+
+	return doIt()
 
 
 doIt = () ->
+	console.log args
 	if args.length != 2
-		console.log("Usage: pdfdown in.md out.pdf")
+		console.log "Usage: pdfdown in.md out.pdf"
 		process.exit(-1)
 
 	reader = new commonmark.DocParser()

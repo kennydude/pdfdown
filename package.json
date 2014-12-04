@@ -5,5 +5,12 @@
     "async": "^0.9.0",
     "commonmark": "^0.12.0",
     "pdfmake": "^0.1.14"
+  },
+  "scripts" : {
+    "start" : "node lib/pdfdown.js",
+    "prepublish" : "make js"
+  },
+  "bin" : {
+    "pdfdown" : "index.js"
   }
 }
