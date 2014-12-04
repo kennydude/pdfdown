@@ -1,0 +1,5 @@
+test*
+lib/font-detector/findfont
+lib/stylesheets/parser.js
+node_modules
+.idea

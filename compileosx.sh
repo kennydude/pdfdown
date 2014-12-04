@@ -1,0 +1,1 @@
+xcrun -sdk macosx swiftc -o lib/font-detector/findfont lib/font-detector/findfont.swift
